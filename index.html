@@ -205,8 +205,18 @@
                 <ul class="contact">
                     <li><a href="https://de.linkedin.com/in/stefan-laube-235822109" target="_blank" rel="noopener">LinkedIn</a></li>
                     <li><a href="https://scholar.google.de/citations?user=WYU5-K4AAAAJ&amp;hl=de" target="_blank" rel="noopener">Google Scholar</a></li>
-                    <li><span>mail AT stefan-laube DOT de</span></li>
+                    <li id="email"><span>mail AT stefan-laube DOT de</span></li>
                 </ul>
+                <script>
+                    (function () {
+                        var user = "mail", domain = ["stefan-laube", "de"].join(".");
+                        var a = document.createElement("a");
+                        a.href = "mailto:" + user + "@" + domain;
+                        a.textContent = "Email";
+                        var li = document.getElementById("email");
+                        li.replaceChildren(a);
+                    })();
+                </script>
             </div>
         </header>
 
